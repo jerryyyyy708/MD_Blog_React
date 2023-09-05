@@ -21,6 +21,8 @@ function MD_App(){
     }
   };
 
+  const mdPath = process.env.PUBLIC_URL + "/posts/" + posts[currentMdIndex] + ".md";
+
   return (
     <div>
       <button onClick={() => setShowMarkdown(true)}>Show MD</button>
@@ -29,7 +31,7 @@ function MD_App(){
       <button onClick={previousMd}>Previous</button>
       Currently Viewing: {posts[currentMdIndex]}
       <button onClick={nextMd}>Next</button>
-      {showMarkdown && <BlogPost mdFilePath={"/posts/" + posts[currentMdIndex] + ".md"}/>}
+      {showMarkdown && <BlogPost mdFilePath={mdPath}/>}
     </div>
   )
 }
