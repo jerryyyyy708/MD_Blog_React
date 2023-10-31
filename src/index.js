@@ -8,7 +8,7 @@ import BlogPost from './BlogPost';
 function MD_App(){
   const [showMarkdown, setShowMarkdown] = useState(true);
   const [currentMdIndex, setCurrentMdIndex] = useState(0);
-  const posts = ["Pandas筆記", "JUCE 開發紀錄", "SSH遠端構建環境與訓練遇到的問題與解方", "YouTube Revenue Prediction"]
+  const posts = ["演算法筆記","Pandas筆記", "JUCE 開發紀錄", "SSH遠端構建環境與訓練遇到的問題與解方", "YouTube Revenue Prediction"]
   const nextMd = () => {
     if (currentMdIndex < posts.length - 1) {
       setCurrentMdIndex(currentMdIndex + 1);
